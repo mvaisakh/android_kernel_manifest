@@ -8,7 +8,7 @@
   <remote name="github"
     fetch="https://github.com/mvaisakh/" />
 
-  <project path="private/msm-google" name="pixel4a" remote="github">
+  <project path="private/msm-google" name="pixel4a" remote="github" revision="eva">
     <linkfile dest="build.config" src="build.config.no-cfi"/>
     <linkfile dest="build_floral.sh" src="build_floral.sh"/>
     <linkfile dest="build_sunfish.sh" src="build_sunfish.sh"/>
@@ -18,4 +18,5 @@
   <project path="prebuilts/gcc/linux-x86/arm/arm-linux-androideabi-4.9" name="platform/prebuilts/gcc/linux-x86/arm/arm-linux-androideabi-4.9" groups="partner" clone-depth="1" />
   <project path="prebuilts-master/clang/host/linux-x86" name="platform/prebuilts/clang/host/linux-x86" remote="aosp" revision="main" groups="partner" clone-depth="1" />
   <project path="prebuilts-master/misc" name="platform/prebuilts/misc" groups="partner" clone-depth="1" />
+  <project path="ak3" name="AnyKernel3" remote="github" revision="eva-pixel4a-4.14" />
 </manifest>
