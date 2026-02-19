@@ -16,7 +16,7 @@
   <project path="build" name="kernel/build" groups="partner"/>
   <project path="prebuilts/gcc/linux-x86/aarch64/aarch64-linux-android-4.9" name="platform/prebuilts/gcc/linux-x86/aarch64/aarch64-linux-android-4.9" groups="partner" clone-depth="1" />
   <project path="prebuilts/gcc/linux-x86/arm/arm-linux-androideabi-4.9" name="platform/prebuilts/gcc/linux-x86/arm/arm-linux-androideabi-4.9" groups="partner" clone-depth="1" />
-  <project path="prebuilts-master/clang/host/linux-x86" name="platform/prebuilts/clang/host/linux-x86" remote="aosp" revision="main" groups="partner" clone-depth="1" />
+  <project path="prebuilts-master/clang/host/linux-x86" name="platform/prebuilts/clang/host/linux-x86" remote="aosp" revision="android16-qpr2-release" groups="partner" clone-depth="1" />
   <project path="prebuilts-master/misc" name="platform/prebuilts/misc" groups="partner" clone-depth="1" />
   <project path="ak3" name="AnyKernel3" remote="github" revision="eva-pixel4a-4.14" />
 </manifest>
