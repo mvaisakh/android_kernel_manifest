@@ -1,6 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <manifest>
-    <remote fetch="https://git.codelinaro.org/clo/la" name="clo-la"/>
+  <remote fetch="https://git.codelinaro.org/clo/la" name="clo-la"/>
+  <remote fetch="https://github.com/mvaisakh" name="mv-github" revision="kplatform" />
   <default remote="clo-la" revision="dummy_revision" sync-c="true" sync-tags="false"/>
   <project remote="clo-la" name="abl/tianocore/edk2" path="kernel_platform/bootable/bootloader/edk2" revision="b55ddaab17afbca10235eb5d2813987aebba2ffe" upstream="refs/heads/uefi.lnx.4.0.r14-rel"/>
   <project remote="clo-la" name="kernel/build" path="kernel_platform/build/kernel" revision="e5889b4763e03a012cb0bef544fa2c0ca5bf537e" upstream="refs/heads/kernel.lnx.6.1.r2-rel">
@@ -34,11 +35,6 @@
   <project remote="clo-la" name="kernel/prebuilts/build-tools" path="kernel_platform/prebuilts/kernel-build-tools" revision="d153b7ab4a4956198957e258d4f370e875c53059" upstream="refs/heads/ks-kernel.lnx.3.0.r1-rel">
     <linkfile dest="kernel_platform/build/prebuilts/kernel-build-tools" src="."/>
   </project>
-  <project remote="clo-la" name="kernel/qcom" path="kernel_platform/msm-kernel" revision="4ff0474e879ceb63dcfd08a7d34a0c917a3f9c08" upstream="refs/heads/kernel.lnx.6.1.r2-rel">
-    <linkfile dest="kernel_platform/WORKSPACE" src="bazel.WORKSPACE"/>
-    <linkfile dest="kernel_platform/build_with_bazel.py" src="build_with_bazel.py"/>
-    <linkfile dest="kernel_platform/build/qcom_build_extensions" src="qcom_build_extensions"/>
-  </project>
   <project remote="clo-la" name="kernel_platform/build/bazel_common_rules" path="kernel_platform/build/bazel_common_rules" revision="9ac051a42545593e4a6bda7f11511acb8476f4e2" upstream="refs/heads/ks-kernel.lnx.3.0.r1-rel"/>
   <project remote="clo-la" name="kernel_platform/external/bazel-skylib" path="kernel_platform/external/bazel-skylib" revision="7fdbc462f5001b7e82f026aa90bd43c494e2a8d8" upstream="refs/heads/ks-kernel.lnx.3.0.r1-rel"/>
   <project remote="clo-la" name="kernel_platform/external/bazelbuild-rules_license" path="kernel_platform/external/bazelbuild-rules_license" revision="f578df4fd057ffe2023728444759535685631548" upstream="refs/heads/ks-kernel.lnx.3.0.r1-rel"/>
@@ -61,5 +57,13 @@
   <project remote="clo-la" name="kernelplatform/prebuilts-master/clang/host/linux-x86" path="kernel_platform/prebuilts/clang/host/linux-x86" revision="9002aa7843a39e9b35bb2d2cbf741cdaf719b981" upstream="refs/heads/ks-kernel.lnx.3.0.r1-rel"/>
   <project remote="clo-la" name="kernelplatform/prebuilts/gcc/linux-x86/host/x86_64-linux-glibc2.17-4.8" path="kernel_platform/prebuilts/gcc/linux-x86/host/x86_64-linux-glibc2.17-4.8" revision="dd099b5d68822602228e2af66693e61e7b54e0a9" upstream="refs/heads/ks-kernel.lnx.3.0.r1-rel">
     <linkfile dest="kernel_platform/build/build-tools/sysroot" src="sysroot"/>
+  </project>
+
+  <!-- Xiaomi 14 stuff-->
+  <project remote="mv-github" name="xiaomi14" path="kernel_platform/msm-kernel" revision="kplatform">
+    <linkfile dest="kernel_platform/WORKSPACE" src="bazel.WORKSPACE"/>
+    <linkfile dest="kernel_platform/build_with_bazel.py" src="build_with_bazel.py"/>
+    <linkfile dest="kernel_platform/build/qcom_build_extensions" src="qcom_build_extensions"/>
+  <project remote="mv-github" name="xiaomi14-devicetrees" path="kernel_platform/sm8650-devicetrees" revision="kplatform" />
   </project>
 </manifest>
