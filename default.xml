@@ -2,6 +2,7 @@
 <manifest>
   <remote fetch="https://git.codelinaro.org/clo/la" name="clo-la"/>
   <remote fetch="https://github.com/mvaisakh" name="mv-github" revision="kplatform" />
+  <remote fetch="https://android.googlesource.com" name="aosp" />
   <default remote="clo-la" revision="dummy_revision" sync-c="true" sync-tags="false"/>
   <project remote="clo-la" name="abl/tianocore/edk2" path="kernel_platform/bootable/bootloader/edk2" revision="b55ddaab17afbca10235eb5d2813987aebba2ffe" upstream="refs/heads/uefi.lnx.4.0.r14-rel"/>
   <project remote="clo-la" name="kernel/build" path="kernel_platform/build/kernel" revision="e5889b4763e03a012cb0bef544fa2c0ca5bf537e" upstream="refs/heads/kernel.lnx.6.1.r2-rel">
@@ -29,7 +30,7 @@
     <linkfile dest="kernel_platform/build/static_analysis" src="static_analysis"/>
     <linkfile dest="kernel_platform/build/_wrapper_common.sh" src="_wrapper_common.sh"/>
   </project>
-  <project remote="clo-la" name="kernel/common" path="kernel_platform/common" revision="81cdceb59c3208f4a0e7bd116fff77b1c6dacbaf" upstream="refs/heads/ks-kernel.lnx.3.0.r1-rel">
+  <project remote="aosp" name="kernel/common" path="kernel_platform/common" revision="android14-6.1">
     <linkfile dest="kernel_platform/.source_date_epoch_dir" src="."/>
   </project>
   <project remote="clo-la" name="kernel/prebuilts/build-tools" path="kernel_platform/prebuilts/kernel-build-tools" revision="d153b7ab4a4956198957e258d4f370e875c53059" upstream="refs/heads/ks-kernel.lnx.3.0.r1-rel">
