@@ -67,4 +67,7 @@
     <linkfile dest="kernel_platform/build/qcom_build_extensions" src="qcom_build_extensions"/>
   </project>
   <project remote="mv-github" name="xiaomi14-devicetrees" path="kernel_platform/sm8650-devicetrees" revision="kplatform" depth="1"/>
+  <project remote="mv-github" name="xiaomi14-modules" path="vendor" revision="kplatform" depth="1">
+    <linkfile dest="kernel_platform/vendor" src="."/>
+  </project>
 </manifest>
