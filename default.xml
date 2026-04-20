@@ -4,7 +4,9 @@
   <remote fetch="https://github.com/mvaisakh" name="mv-github" revision="kplatform" />
   <remote fetch="https://android.googlesource.com" name="aosp" />
   <default remote="clo-la" revision="dummy_revision" sync-c="true" sync-tags="false" depth="1" />
-  <project remote="clo-la" name="abl/tianocore/edk2" path="kernel_platform/bootable/bootloader/edk2" revision="b55ddaab17afbca10235eb5d2813987aebba2ffe" upstream="refs/heads/uefi.lnx.4.0.r14-rel" depth="1"/>
+  <project remote="clo-la" name="abl/tianocore/edk2" path="kernel_platform/bootable/bootloader/edk2" revision="b55ddaab17afbca10235eb5d2813987aebba2ffe" upstream="refs/heads/uefi.lnx.4.0.r14-rel" depth="1">
+    <linkfile dest="kernel_platform/bootable/bootloader/edk2/QcomModulePkg/build.config.msm.houji" src="QcomModulePkg/build.config.msm.pineapple"/>
+  </project>
   <project remote="clo-la" name="kernel/build" path="kernel_platform/build/kernel" revision="e5889b4763e03a012cb0bef544fa2c0ca5bf537e" upstream="refs/heads/kernel.lnx.6.1.r2-rel" depth="1">
     <linkfile dest="kernel_platform/tools/bazel" src="kleaf/bazel.sh"/>
     <linkfile dest="kernel_platform/build/build.sh" src="build.sh"/>
